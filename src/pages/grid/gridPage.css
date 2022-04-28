@@ -1,0 +1,132 @@
+.wrapper2{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto 100px;
+    height: 90vh;
+    background-color: pink;
+}
+
+.body2 {
+    border: 1px dotted rgb(20, 14, 14);
+    justify-content: space-evenly;
+    width: 75vw;
+    height: 70vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+.menuItems2{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 120px;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-left: 75px;
+}
+.menuItem2{
+    border: 2px solid black;
+    text-align: center;
+    transition: 0.2s;
+    transition-property: color, transform;
+    }
+
+
+
+.menuItem2:hover {
+color: #FF5733;
+transform: scale(1.3);
+}
+
+.form2 {
+    width: 55vw;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title2{
+    background-color: blue;
+    height: 30px;
+    color: white;
+    text-align: center;
+}
+
+.input2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.input2 input {
+    width: 100%;
+    height: 50px;
+    
+}
+
+.buttons2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.buttons2 button{
+    width: 25vw;
+    height: 50px;
+    background-color: #FF5733;
+    transition: 0.5s;
+}
+
+.buttons2 button:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.sideBar2 {
+    background-color: aqua;
+    height: 90vh;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* iPhone XS Media Query for max-width: */
+@media only screen and (max-width: 375px){
+
+        .body2{
+            margin-left: 50px;
+        }
+        .sideBar2, .menuItems2{
+            display: none;
+        }
+    
+        .form2 {
+            width: 65vw;
+            margin-left: 15px;
+        }
+    
+        .buttons2 button {
+            visibility: hidden;
+          }
+          .reset2:after {
+            content:'Reset';
+            visibility: visible;
+            display: block;
+            background-color: #FF5733;
+            padding: 10px;
+            margin-top: -50px;
+          }
+    
+          .submit2:after {
+            content:'Submit';
+            visibility: visible;
+            display: block;
+            background-color: #FF5733;
+            padding: 10px;
+            margin-top: -50px;
+          }
+    }
