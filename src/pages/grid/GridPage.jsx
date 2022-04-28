@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./gridPage.css";
 
@@ -28,14 +28,14 @@ const GridPage = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     // for form basic validation
-    if ((text4.includes("@") == false) ) { // some email rules
+    if ((text4.includes("@") === false) ) { // some email rules
       alert("Please enter valid email address");
     } else if (
-      text4.split("")[text4.length - 3] != "." &&
-      text4.split("")[text4.length - 4] != "."
+      text4.split("")[text4.length - 3] !== "." &&
+      text4.split("")[text4.length - 4] !== "."
     ) {
       alert("Please enter valid email address");
-    } else if (text.length == 0 || text2.length == 0 || text3.length == 0 ){ // do not allow empty input
+    } else if (text.length === 0 || text2.length === 0 || text3.length === 0 ){ // do not allow empty input
       alert('Please enter a valid value in the empty boxes')
     } else { // If each input is full and the email is valid, redirect to the FlexPage page after submitting and empty the input values.
       navigate("/");
